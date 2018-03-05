@@ -5,30 +5,10 @@ Spyder Editor
 This is a temporary script file for a console_based trading application.
 """
 
-import os
 from prettytable import PrettyTable
 import urllib.request as req
 import re
-
-
-### FUNCTIONS ###
-
-def display_title_bar():
-    # Clears the terminal screen, and displays a title bar.
-    os.system('clear')
-              
-    print("\t**********************************************")
-    print("\t***  Trading Desk - Play and Win!  ***")
-    print("\t**********************************************")
-    
-def display_title_bar1():
-    # Clears the terminal screen, and displays a title bar.
-    os.system('clear')
-              
-    print("\t**********************************************")
-    print("\t***  Buy or Sell or Quit?  ***")
-    print("\t**********************************************")
-    
+   
 menu = ['Buy', 'Sell', 'Show Blotter', 'Show P/L', 'Quit' ]
 equities = ('GOOG', 'AAPL', 'GE', 'DDD', 'TNET')
 blotter = PrettyTable()
@@ -37,7 +17,7 @@ blotter.field_names = ['Side', 'Volume', 'Symbol', 'Market Price', 'Cash Change'
 pl = PrettyTable()
 pl.field_names = ['Side', 'Position or Inventory', 'UPL', 'RPL', 'WAP']
 
-
+### FUNCTIONS ### 
 # Menu Bar
 def display_menu(menu):
     for m in menu:
